@@ -8,7 +8,7 @@ An Express.js project implemented using JavaScript (NodeJS, Express.js and Passp
 * Clone the repository
 * Go to [https://console.telia.io](https://console.telia.io)
 * Register a 'NodeJS (Server)' application and write down your client id and secret
-* Insert your client settings the Passport configuration file under 'server -> config -> passport.js'
+* Insert your client settings in the Passport configuration file under 'server -> config -> passport.js'
 ```
 var CLIENT_ID = 'YOUR_CLIENT_ID_HERE';
 var CLIENT_SECRET = 'YOUR_CLIENT_SECRET_HERE';
