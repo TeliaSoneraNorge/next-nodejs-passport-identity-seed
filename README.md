@@ -6,7 +6,7 @@ An Express.js project implemented using JavaScript (NodeJS, Express.js and Passp
 # Installation
 
 * Clone the repository
-* Go to [https://console.telia.io]
+* Go to [https://console.telia.io](https://console.telia.io)
 * Register a 'NodeJS (Server)' application and write down your client id and secret
 * Insert your client id and secret in the Passport configuration file under 'server -> config -> passport.js'
 ```
@@ -19,7 +19,7 @@ npm install
 npm start
 ```
 
-Browse to [http://localhost:3000]
+* Browse to [http://localhost:3000](http://localhost:3000)
 
 Wow, it works!
 
