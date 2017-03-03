@@ -5,9 +5,10 @@ var Strategy = require('passport-openidconnect').Strategy;
 // set issuer' specific OIDC endpoints
 var IDENTITY_ISSUER = 'https://login.telia.io/realms/telia';
 var IDENTITY_ISSUER_ENDPOINT = IDENTITY_ISSUER + '/protocol/openid-connect';
-// set client credentials
+// your client settings
 var CLIENT_ID = 'YOUR_CLIENT_ID_HERE';
 var CLIENT_SECRET = 'YOUR_CLIENT_SECRET_HERE';
+var CLIENT_REDIRECT_URL = "YOUR_CLIENT_REDIRECT_URL";  //Telia Identity uses 'http://localhost:3000/auth/callback' as default
 
 
 module.exports = function (passport) {
@@ -31,7 +32,7 @@ module.exports = function (passport) {
                 userInfoURL: IDENTITY_ISSUER_ENDPOINT + '/userinfo',
                 clientID: CLIENT_ID,
                 clientSecret: CLIENT_SECRET,
-                callbackURL: "http://localhost:3000/auth/callback",
+                callbackURL: CLIENT_REDIRECT_URL,
                 scope: ['oidc']
             },
             function(accessToken, refreshToken, profile, next) {
