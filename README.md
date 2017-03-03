@@ -1,13 +1,13 @@
 Telia Identity and Express.js 
 =========================
 
-An Express.js project implemented using JavaScript (NodeJS, Express.js and Passport.js):
+A barebone project implemented using JavaScript (NodeJS, Express.js and Passport.js), which provides authentication against Telia Identity Provider via the OpenID Connect protocol.
 
 # Installation
 
 * Clone the repository
 * Go to [https://console.telia.io](https://console.telia.io)
-* Register a 'NodeJS (Server)' application and write down your client id and secret
+* Register a 'NodeJS (Server)' application and write down your client id, secret, and callback URL
 
 	> Note: You will only be able to see the user data marked as 'Required' in this case  
 
@@ -15,6 +15,7 @@ An Express.js project implemented using JavaScript (NodeJS, Express.js and Passp
 ```
 var CLIENT_ID = 'YOUR_CLIENT_ID_HERE';
 var CLIENT_SECRET = 'YOUR_CLIENT_SECRET_HERE';
+var CLIENT_REDIRECT_URL = 'YOUR_CLIENT_REDIRECT_URL'; 
 ```
 * Execute the following at the root of the project
 ```
@@ -30,7 +31,7 @@ Wow, it works!
 
     .
     ├── server                  # Main project files
-    │   ├── index.ts            # Required from ../index.js with ts-node
+    │   ├── index.js            # Main NodeJS server file
 	│   ├── config              # Configuration folder
 	│   ├───├── passport.js     # Passport OpenIDConnect plugin configuration
 	.gitignore                  # Files to exclude from git commit
