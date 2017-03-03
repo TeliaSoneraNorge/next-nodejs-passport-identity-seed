@@ -8,7 +8,7 @@ var IDENTITY_ISSUER_ENDPOINT = IDENTITY_ISSUER + '/protocol/openid-connect';
 // your client settings
 var CLIENT_ID = 'YOUR_CLIENT_ID_HERE';
 var CLIENT_SECRET = 'YOUR_CLIENT_SECRET_HERE';
-var CLIENT_REDIRECT_URL = "YOUR_CLIENT_REDIRECT_URL";  //Telia Identity uses 'http://localhost:3000/auth/callback' as default
+var CLIENT_REDIRECT_URL = 'YOUR_CLIENT_REDIRECT_URL';  //Telia Identity uses 'http://localhost:3000/auth/callback' as default
 
 
 module.exports = function (passport) {
