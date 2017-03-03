@@ -7,7 +7,7 @@ An Express.js project implemented using JavaScript (NodeJS, Express.js and Passp
 
 * Clone the repository
 * Go to [https://console.telia.io](https://console.telia.io)
-* Register a 'NodeJS (Server)' application and write down your client id and secret
+* Register a 'NodeJS (Server)' application and write down your client id, secret and redirect url
 * Insert your client settings in the Passport configuration file under 'server -> config -> passport.js'
 ```
 var CLIENT_ID = 'YOUR_CLIENT_ID_HERE';
@@ -28,7 +28,7 @@ Wow, it works!
 
     .
     ├── server                  # Main project files
-    │   ├── index.ts            # Required from ../index.js with ts-node
+    │   ├── index.js            # Main NodeJS file
 	│   ├── config              # Configuration folder
 	│   ├───├── passport.js     # Passport OpenIDConnect plugin configuration
 	.gitignore                  # Files to exclude from git commit
