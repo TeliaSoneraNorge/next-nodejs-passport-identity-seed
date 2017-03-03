@@ -1,0 +1,18 @@
+{
+  "name": "next-nodejs-express-passport-oidc",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "author": "Jeremy Toussaint",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "express": "^4.15.0",
+    "express-session": "^1.15.1",
+    "passport": "^0.3.2",
+    "passport-openidconnect": "0.0.2"
+  },
+  "description": "Web application served by NodeJS/Express server which implements Telia Identity Solution",
+  "license": "MIT"
+}
