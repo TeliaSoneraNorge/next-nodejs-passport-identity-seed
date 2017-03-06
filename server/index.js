@@ -50,18 +50,32 @@ app.get('/',  function (req, res) {
     //just verifying that there is a user object on the request
     if(req.user) {
 
-        //Build and send an HTML response object with user data from Identity Service
+        // recover available data from user profile
         var user = req.user._json;
+        var givenName = user.given_name || '';
+        var familyName = user.family_name || '';
+        var phoneNumber = user.phone_number || '';
+        var email = user.email || '';
+        var birthdate = user.birthdate || '';
+        var gender = user.gender || '';
+        var gender = user.gender || '';
+        var address = user.address || '';
+        var addressFormatted = '';
+        if(address !== '') {
+            addressFormatted = user.address.formatted || '';
+        }
+
+        //Build and send an HTML response object with user data from Identity Service
         var head = '<head><title>Welcome</title></head>';
-        var body = '<body><h1>Welcome ' + user.given_name + '</h1>' +
+        var body = '<body><h1>Welcome ' + givenName + '</h1>' +
             '<div>What we know about you:</div>' +
             '<ul>' +
-                '<li><u>name:</u> ' + user.given_name + ' ' + user.family_name + '</li>' +
-                '<li><u>tel:</u> ' + user.phone_number + '</li>' +
-                '<li><u>email:</u> ' + user.email + '</li>' +
-                '<li><u>birthdate:</u> ' + user.birthdate + '</li>' +
-                '<li><u>gender:</u> ' + user.gender + '</li>' +
-                '<li><u>address:</u> ' + user.address.formatted + '</li>' +
+                '<li><u>name:</u> ' + givenName + ' ' + familyName + '</li>' +
+                '<li><u>tel:</u> ' + phoneNumber + '</li>' +
+                '<li><u>email:</u> ' + email + '</li>' +
+                '<li><u>birthdate:</u> ' + birthdate + '</li>' +
+                '<li><u>gender:</u> ' + gender + '</li>' +
+                '<li><u>address:</u> ' + addressFormatted + '</li>' +
             '</ul>';
         res.send('<html>'+head+body+'</html>');
 
