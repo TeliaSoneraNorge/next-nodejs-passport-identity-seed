@@ -1,10 +1,12 @@
 'use strict';
 
+// import passport openid-connect strategy
 var Strategy = require('passport-openidconnect').Strategy;
 
 // set issuer' specific OIDC endpoints
 var IDENTITY_ISSUER = 'https://login.telia.io/realms/telia';
 var IDENTITY_ISSUER_ENDPOINT = IDENTITY_ISSUER + '/protocol/openid-connect';
+
 // your client settings
 var CLIENT_ID = 'YOUR_CLIENT_ID_HERE';
 var CLIENT_SECRET = 'YOUR_CLIENT_SECRET_HERE';
